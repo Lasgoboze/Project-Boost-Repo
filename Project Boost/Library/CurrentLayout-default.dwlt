@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 876, y: 492}
   m_MaxSize: {x: 16001, y: 14042}
   vertical: 0
-  controlID: 87
+  controlID: 53
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 601, y: 492}
   m_MaxSize: {x: 12001, y: 14042}
   vertical: 1
-  controlID: 88
+  controlID: 54
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 601, y: 221}
   m_MaxSize: {x: 12001, y: 4021}
   vertical: 0
-  controlID: 89
+  controlID: 55
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -351,13 +351,13 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Repos\Unity 3D\Project Boost
+  m_LastProjectPath: C:\Users\Lasko\Documents\GitHub\Project-Boost\Project Boost
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c03a0000
-    m_LastClickedID: 15040
+    m_SelectedIDs: c63a0000
+    m_LastClickedID: 15046
     m_ExpandedIDs: 00000000be3a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 24.649914, y: -55.85746, z: 440.77563}
+    m_Target: {x: 25.196825, y: 10.762493, z: 450.18433}
     speed: 2
-    m_Value: {x: 24.649914, y: -55.85746, z: 440.77563}
+    m_Value: {x: 25.196825, y: 10.762493, z: 450.18433}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -618,13 +618,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08717723, y: -0.022416225, z: 0.0019643868, w: 0.99594384}
+    m_Target: {x: -0.02429924, y: -0.026078045, z: 0.0006315656, w: -0.9993688}
     speed: 2
-    m_Value: {x: 0.087176785, y: -0.02241611, z: 0.0019643768, w: 0.9959387}
+    m_Value: {x: -0.024299132, y: -0.02607793, z: 0.0006315628, w: -0.9993644}
   m_Size:
-    m_Target: 420.49997
+    m_Target: 264.26462
     speed: 2
-    m_Value: 420.49997
+    m_Value: 264.26462
   m_Ortho:
     m_Target: 0
     speed: 2
