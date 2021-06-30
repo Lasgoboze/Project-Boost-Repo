@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody rb;
-    AudioSource audioSource;
+    //PARAMTERS - for tuning, typically set in the editor
+    //CACHE - e.g. references for readability or speed
+    //STATE - private instance (member) variables
+
     [SerializeField]float thrust = 2000;
     [SerializeField]float rotationSpeed = 400;
+    [SerializeField] AudioClip mainEngine;
+    Rigidbody rb;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +35,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * Time.deltaTime * thrust);
             if (!audioSource.isPlaying)
             {
-               audioSource.Play(); 
+               audioSource.PlayOneShot(mainEngine); 
             }
         }
         else
