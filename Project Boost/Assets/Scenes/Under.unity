@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &492240729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5789586451545308044, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_Name
+      value: Capsule (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422056914484262994, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422056914484262994, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 34078b4b56fedc74fa6c158db0c1eb68, type: 2}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 317
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288726822528577557, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1aca9a78370a0344e81ce8f7ad784894, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,8 +401,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1534594485, guid: 90e2287c684b6fc48b56747cfc3fdf5e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e2287c684b6fc48b56747cfc3fdf5e, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -422,26 +486,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &972405606 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 56602848343807636, guid: 90e2287c684b6fc48b56747cfc3fdf5e, type: 3}
-  m_PrefabInstance: {fileID: 837648101}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &972405611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972405606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4824ae614604dd46a872bb1ec25f585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 8000
-  rotationSpeed: 400
-  mainEngine: {fileID: 8300000, guid: 09cc4c4d8c696b243acf60ba4ae97920, type: 3}
 --- !u!1001 &1164905120
 PrefabInstance:
   m_ObjectHideFlags: 0

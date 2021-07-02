@@ -6,18 +6,41 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] AudioClip explosion;
     [SerializeField] AudioClip success;
+    [SerializeField] ParticleSystem explosionParticles;
+    [SerializeField] ParticleSystem successParticles;
     [SerializeField]float delayInSeconds = 3f;
+    [SerializeField] ParticleSystem mainThrust;
+    [SerializeField] ParticleSystem leftThrust;
+    [SerializeField] ParticleSystem rightThrust;
     AudioSource audioSource;
     bool isTransitioning = false;
+    bool collisionDisabled = false;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();   
+        audioSource = GetComponent<AudioSource>(); 
+    }
+
+    private void Update()
+    {
+        RespondToDebugKeys();
+    }
+
+    void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled; //This will toggle collision
+        }
     }
 
     private void OnCollisionEnter(Collision other) 
     {
-        if (isTransitioning)
+        if (isTransitioning || collisionDisabled)
         {
             return;
         }        
@@ -39,23 +62,26 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
-        //todo add Particle effect upon crash.
         isTransitioning = true;
         audioSource.Stop();
         Invoke ("LoadNextLevel", delayInSeconds);
         GetComponent<Movement>().enabled = false;
         audioSource.PlayOneShot(success);
+        successParticles.Play();
 
     }
 
     void StartCrashSequence()
-    {
-        //todo add Particle effect upon crash. 
+    { 
         isTransitioning = true;
         audioSource.Stop();
         GetComponent<Movement>().enabled = false;
         Invoke ("ReloadLevel", delayInSeconds);
         audioSource.PlayOneShot(explosion);
+        explosionParticles.Play();
+        mainThrust.Stop();
+        leftThrust.Stop();
+        rightThrust.Stop();
     }
 
     void LoadNextLevel()

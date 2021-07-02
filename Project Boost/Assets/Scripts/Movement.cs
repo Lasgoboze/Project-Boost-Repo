@@ -10,6 +10,9 @@ public class Movement : MonoBehaviour
 
     [SerializeField]float thrust = 2000;
     [SerializeField]float rotationSpeed = 400;
+    [SerializeField] ParticleSystem mainThrust;
+    [SerializeField] ParticleSystem leftThrust;
+    [SerializeField] ParticleSystem rightThrust;
     [SerializeField] AudioClip mainEngine;
     Rigidbody rb;
     AudioSource audioSource;
@@ -32,27 +35,71 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * Time.deltaTime * thrust);
-            if (!audioSource.isPlaying)
-            {
-               audioSource.PlayOneShot(mainEngine); 
-            }
+            StartThrusting();
         }
         else
         {
-            audioSource.Stop();
+            StopThrusting();
         }
-        
+
     }
+
+    private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * Time.deltaTime * thrust);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+        if (!mainThrust.isPlaying)
+        {
+            mainThrust.Play();
+        }
+    }
+
+    private void StopThrusting()
+    {
+        audioSource.Stop();
+        mainThrust.Stop();
+    }
+
     void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotationSpeed);
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotationSpeed);
+            RotateRight();
+        }
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationSpeed);
+        if (!rightThrust.isPlaying)
+        {
+            rightThrust.Play();
+        }
+        else
+        {
+            StopRotating();
+        }
+    }
+
+    private void StopRotating()
+    {
+        rightThrust.Stop();
+        leftThrust.Stop();
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationSpeed);
+        if (!leftThrust.isPlaying)
+        {
+            leftThrust.Play();
         }
     }
 
